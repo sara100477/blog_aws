@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KET', '2auw%bv8qz45-rif5p=z#nru#110-l
 #DEBUG = True
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = ['blog-env.zipcbyc6uz.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['blog-env.zipcbyc6uz.us-west-2.elasticbeanstalk.com','*']
 
 
 # Application definition
@@ -120,7 +120,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_TMP = os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'
 
 os.makedirs(STATIC_TMP, exist_ok=True)
