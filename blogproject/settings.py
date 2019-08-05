@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KET', '2auw%bv8qz45-rif5p=z#nru#110-l
 #DEBUG = True
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','blog-env.zipcbyc6uz.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
